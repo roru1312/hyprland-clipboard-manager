@@ -1,4 +1,3 @@
-```markdown
 # Hyprland Python Clipboard Manager
 
 Un gestor de portapapeles rápido, estético y libre de errores para Hyprland, construido con **Rofi**, **Cliphist** y **Python**.
@@ -32,7 +31,6 @@ Este script requiere Python y las herramientas estándar de Wayland.
 
 ```bash
 sudo pacman -S python rofi-wayland cliphist wl-clipboard grim slurp
-
 ```
 
 ## 🚀 Instalación
@@ -40,20 +38,16 @@ sudo pacman -S python rofi-wayland cliphist wl-clipboard grim slurp
 Sigue estos 4 pasos sencillos:
 
 ### 1. Descargar el Script
-
 Baja el archivo `clipboard_manager.py` de este repositorio y guárdalo en tu carpeta de scripts (por ejemplo, `~/.config/hypr/scripts/`).
 
 ### 2. Dar Permisos
-
 Haz que el script sea ejecutable:
 
 ```bash
 chmod +x ~/.config/hypr/scripts/clipboard_manager.py
-
 ```
 
 ### 3. Configurar Hyprland
-
 Edita tu archivo de configuración `~/.config/hypr/hyprland.conf`.
 
 **Añade estas líneas al inicio (Inicio Automático):**
@@ -62,23 +56,19 @@ Es importante usar dos líneas separadas para texto e imágenes para evitar la c
 ```ini
 exec-once = wl-paste --type text --watch cliphist store
 exec-once = wl-paste --type image --watch cliphist store
-
 ```
 
 **Añade el atajo de teclado (Bind):**
 
 ```ini
 bind = SUPER SHIFT, V, exec, ~/.config/hypr/scripts/clipboard_manager.py
-
 ```
 
 ### 4. Aplicar Cambios
-
 Reinicia Hyprland o recarga la configuración para que los cambios surtan efecto:
 
 ```bash
 hyprctl reload
-
 ```
 
 ## ⌨️ Uso y Atajos
@@ -86,12 +76,8 @@ hyprctl reload
 Una vez abierto el menú con `Super + Shift + V`:
 
 | Tecla | Acción |
-| --- | --- |
+| :--- | :--- |
 | **Enter** | Copia el elemento seleccionado y cierra el menú. |
 | **Alt + Izquierda** | **Vista Previa / Visor:** Abre una ventana limpia para leer textos largos, código completo o ver qué contiene una imagen sin copiarla. |
 | **Alt + Derecha** | **Borrar:** Elimina el elemento seleccionado del historial permanentemente. |
 | **Esc** | Cerrar el menú. |
-
-```
-
-```
